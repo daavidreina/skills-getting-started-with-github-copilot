@@ -101,7 +101,9 @@ section h3 {
 }
 
 .participant-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: linear-gradient(180deg, #ffffff, #f1f7ff);
   color: #1a237e;
   border: 1px solid #cfe0ff;
@@ -111,13 +113,29 @@ section h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 160px;
+  max-width: 200px;
 }
 
-.no-participants {
-  font-style: italic;
-  color: #666;
-  font-size: 0.9rem;
+.delete-participant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: #1a237e;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.delete-participant:hover {
+  background-color: rgba(26, 35, 126, 0.15);
 }
 
 .form-group {
